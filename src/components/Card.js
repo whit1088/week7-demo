@@ -15,10 +15,10 @@ function Card({data}) {
           <Grid item xs={12} sm={6} md={4} key={item.id}>
             <Paper elevation={3} className='paper'>
               <img src={item.image} alt={item.title} className='img' />
-              <Rating name='disabled' value={item.rating.rate} disabled />
               <Typography variant='body1' gutterBottom>
                 {item.title}
               </Typography>
+              <Rating name='disabled' value={item.rating.rate} disabled />
             </Paper>
           </Grid>
         ))}
