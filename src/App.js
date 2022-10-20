@@ -3,6 +3,8 @@ import './App.css';
 import Container from '@mui/material/Container';
 import Header from './components/Header';
 import Card from './components/Card';
+import { Routes, Route } from 'react-router-dom';
+import Women from './components/Women'
 
 function App() {
 
@@ -18,7 +20,10 @@ function App() {
     <div className='App'>
       <Container>
         <Header />
-        <Card data={data}/>
+        <Routes>
+          <Route path='/' element={ <Card data={data}/>} />
+          <Route path='/women' element={ <Women data={data}/>} />
+        </Routes>
       </Container>
     </div>
   );
